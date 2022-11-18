@@ -1,0 +1,7 @@
+javac b1
+javah b1
+(locate openjdk
+find linux)
+gcc -fPIC -I"(path till include)" -I"(path)/linux" -shared -olib(filename,no space).so filename.c
+
+java -Djava.library.path=.filename
