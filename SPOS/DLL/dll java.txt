@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class b1 {  
+   static {
+      System.loadLibrary("b1"); 
+                                   
+   }
+ 
+  
+   private native void add(int a , int b);
+   private native void sub(int a, int b);
+   private native void mult(int a, int b);
+   private native void div(int a, int b);
+ 
+   // Test Driver
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter value for a: ");
+      int a = sc.nextInt();
+      System.out.println("Enter value for b: ");
+      int b = sc.nextInt();
+      
+      
+      new b1().add(a,b);  
+      new b1().sub(a,b);
+      new b1().mult(a,b);
+      new b1().div(a,b);
+   }
+}
